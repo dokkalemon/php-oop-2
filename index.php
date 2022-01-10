@@ -9,6 +9,12 @@ Eseguire poi degli output istanziando oggetti delle varie classi.
  -->
 
 
+ <?php
+
+    require_once __DIR__ . '/classes/Product.php'
+
+ ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
