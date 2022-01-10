@@ -1,13 +1,18 @@
 <?php
 class Product {
-    protected $name;
-    protected $price;
-    protected $shipment;
-    protected $discount;
+    public $name;
+    public $price;
+    public $category;
 
-    public function __construct($name, $price) {
+    public function __construct($name, $price, $category) {
         $this->name = $name;
         $this->price = $price;
+        $this->category = $category;
+    }
+
+    public function calcDay() {
+        $d=strtotime("+3 day");
+        return date("Y-m-d h:i:sa", $d);
     }
 }
 ?>

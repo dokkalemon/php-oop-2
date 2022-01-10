@@ -25,6 +25,29 @@ Eseguire poi degli output istanziando oggetti delle varie classi.
     <title>Shop Online</title>
 </head>
 <body>
+
+    <header>
+        <h1>Shop Online</h1>
+    </header>
+
+
+    <main>
+        <?php 
+            $mouse = new Product('Trust Yvi Mouse Wireless', 6.99, 'Informatica');
+            var_dump($mouse);
+        ?>
+
+        <h4><?php echo $mouse->name ?></h4>
+        <ul>
+            <li>Prezzo: <b>€ <?php echo $mouse->price ?></b></li>
+            <li>Categoria: <b><?php echo $mouse->category ?></b></li>
+            <li>Arrivo previsto: <b><?php echo $mouse->calcDay() ?></b></li>
+        </ul>
+
+
+
+    </main>
+
     
 </body>
 </html>
