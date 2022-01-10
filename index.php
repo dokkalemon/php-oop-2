@@ -44,6 +44,7 @@ Eseguire poi degli output istanziando oggetti delle varie classi.
             <li>Prezzo: <b>€ <?php echo $mouse->price ?></b></li>
             <li>Categoria: <b><?php echo $mouse->category ?></b></li>
             <li>Arrivo previsto: <b><?php echo $mouse->calcDay() ?></b></li>
+            <li>Sconto: <b><?php echo $mouse->getSconto() ?></b></li>
         </ul>
 
         <hr>
@@ -59,6 +60,7 @@ Eseguire poi degli output istanziando oggetti delle varie classi.
             <li>Arrivo previsto: <b><?php echo $computer->calcDay() ?></b></li>
             <li>Colore: <b><?php echo $computer->color ?></b></li>
             <li>Prodotto Consigliato: <b><?php echo $computer->relatedArticles ?></b></li>
+            <li>Sconto: <b><?php echo $computer->getSconto() ?></b></li>
         </ul>
 
 
