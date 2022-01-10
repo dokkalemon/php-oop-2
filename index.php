@@ -11,7 +11,8 @@ Eseguire poi degli output istanziando oggetti delle varie classi.
 
  <?php
 
-    require_once __DIR__ . '/classes/Product.php'
+    require_once __DIR__ . '/classes/Product.php';
+    require_once __DIR__ . '/classes/Premium.php';
 
  ?>
 
@@ -32,9 +33,10 @@ Eseguire poi degli output istanziando oggetti delle varie classi.
 
 
     <main>
+
+    <!-- Prodotto Normale -->
         <?php 
             $mouse = new Product('Trust Yvi Mouse Wireless', 6.99, 'Informatica');
-            var_dump($mouse);
         ?>
 
         <h4><?php echo $mouse->name ?></h4>
@@ -42,6 +44,21 @@ Eseguire poi degli output istanziando oggetti delle varie classi.
             <li>Prezzo: <b>€ <?php echo $mouse->price ?></b></li>
             <li>Categoria: <b><?php echo $mouse->category ?></b></li>
             <li>Arrivo previsto: <b><?php echo $mouse->calcDay() ?></b></li>
+        </ul>
+
+        <hr>
+    <!-- Prodotto Premium -->
+        <?php $computer = new Premium('Lenovo Notebook', 376, 'Informatica', 'Grigio Siderale', 'Amazon Basics, Custodia');
+        ?>
+
+
+        <h4><?php echo $computer->name ?></h4>
+        <ul>
+            <li>Prezzo: <b> € <?php echo $computer->price ?></b></li>
+            <li>Categoria: <b><?php echo $computer->category ?></b></li>
+            <li>Arrivo previsto: <b><?php echo $computer->calcDay() ?></b></li>
+            <li>Colore: <b><?php echo $computer->color ?></b></li>
+            <li>Prodotto Consigliato: <b><?php echo $computer->relatedArticles ?></b></li>
         </ul>
 
 

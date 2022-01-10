@@ -11,7 +11,7 @@ class Product {
     }
 
     public function calcDay() {
-        $d=strtotime("+3 day");
+        $d=strtotime("+5 day");
         return date("Y-m-d h:i:sa", $d);
     }
 }
